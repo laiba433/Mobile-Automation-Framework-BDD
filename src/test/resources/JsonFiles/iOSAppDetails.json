@@ -1,0 +1,8 @@
+{ "Key":"iOS",
+  "App": "/Users/musabmehboob/Library/Developer/Xcode/DerivedData/Build/Products/QA-iphonesimulator/vTrader.app",
+  "Platform_Name": "iOS",
+  "Platform_Version": "15.2",
+  "DeviceName": "iPhone SE- 2nd generation",
+  "AutomationName": "XCUITest",
+  "Udid": "45DB807E-A9E8-4147-8EF0-3C239177EA11"
+}

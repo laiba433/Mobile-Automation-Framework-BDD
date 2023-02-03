@@ -1,0 +1,9 @@
+/Logs/
+/Reports/
+/target/
+*.log
+/Logs/
+/Reports/
+/target/
+*.js
+*.css

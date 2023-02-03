@@ -1,0 +1,197 @@
+{
+  "LoginBtnSplash":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name='Login']"
+  },
+  "Username":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeApplication[@name='vBate QA']/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeTextField"
+  },
+  "Password":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeApplication[@name='vBate QA']/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeSecureTextField"
+  },
+  "LoginButton":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name='Login']"
+  },
+  "CodeField":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeApplication[@name='vBate QA']/XCUIElementTypeWindow/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeTextField"
+  },
+  "VerifyButton":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name='Verify']"
+  },
+  "SymbolField":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeApplication[@name='vBate']/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeTextField[1]"
+  },
+  "AddSymbolIcon":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name=\"Trade/AddIcon\"]"
+  },
+  "TradeTab":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name=\"Trade\"]"
+  },
+  "QuantityField":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeApplication[@name=\"vBate\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeTextField[2]"
+  },
+  "BuyButton":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeApplication[@name=\"vBate\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeButton[2]"
+  },
+  "SendOrderButton":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name=\"Send order\"]"
+  },
+  "AccountCombo":
+  {
+    "locator": "XPath",
+    "value": "\t\n//XCUIElementTypeButton[@name=\"1LOC-LOCA-123456-M\"]"
+  },
+  "AccountCombo2":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name=\"qatest23account1\"]"
+  },
+  "AdvancaTradeButton":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name=\"Advance Trade\"]"
+  },
+  "ConfirmOrderYes":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name=\"Yes\"]"
+  },
+  "ConfirmOrderPopUp":
+  {
+    "locator": "Name",
+    "value": "Order Confirmation"
+  },
+  "ConfirmOrderNo":
+  {
+    "locator": "Name",
+    "value": "No"
+  },
+  "WatchListTab":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name=\"Watchlist\"]"
+  },
+  "EditWatchList":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeImage[@name=\"WatchList/EditIcon\"]"
+  },
+  "WatchListSymbolField":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeApplication[@name=\"vBate\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField"
+  },
+  "WatchListAddSymbolicon":
+  {
+    "locator": "XPath",
+    "value": "(//XCUIElementTypeButton[@name=\"Trade/AddIcon\"])[1]"
+  },
+  "AddWatchListButton":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name=\"Add Watchlist\"]"
+  },
+  "AddWatchlistPopupLabel":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeStaticText[@name=\"Add Watchlist\"]"
+  },
+  "AddWatchlistAlert":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeAlert[@name=\"Add Watchlist\"]"
+  },
+  "AddWatchListAlerttextfield":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeAlert[@name='Add Watchlist']/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeScrollView[1]/XCUIElementTypeOther[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeCollectionView/XCUIElementTypeCell/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther[2]/XCUIElementTypeTextField"
+  },
+  "WatchListExist":
+  {
+    "locator": "XPath",
+    "value": "(//XCUIElementTypeStaticText[@name=\"Logiciel\"])[1]"
+  },
+  "CancelButton":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name=\"Cancel\"]"
+  },
+  "CreateButton":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name=\"Create\"]"
+  },
+  "AddWatchListAlertLabel":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeStaticText[@name=\"Add Watchlist\"]"
+  },
+  "PositionList":
+  {
+    "locator": "Class",
+    "value": "androidx.appcompat.widget.LinearLayoutCompat\n"
+  },
+  "PositionTab":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name=\"Positions\"]"
+  },
+  "OrderTab":
+  {
+    "locator": "Name",
+    "value": "Orders"
+  },
+  "OrderSymbol":
+  {
+    "locator": "Name",
+    "value": "Order Symbol"
+  },
+  "OrderQuantity":
+  {
+    "locator": "Name",
+    "value": "Order Quantity"
+  },
+  "Increase":
+  {
+    "locator": "Name",
+    "value": "Increase"
+  },
+  "Flatten":
+  {
+    "locator": "Name",
+    "value": "Flatten"
+  },
+  "Decrease":
+  {
+    "locator": "Name",
+    "value": "Decrease"
+  },
+  "MenuIcon":
+  {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeButton[@name=\"PositionRowComponent\"]"
+  }
+}

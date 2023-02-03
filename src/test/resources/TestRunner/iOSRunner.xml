@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="iOS Test Suite" thread-count="1">
+    <parameter name="Username" value="usama165@mailinator.com" />
+    <parameter name="Password" value="usama165" />
+    <parameter name="Key" value="Android" />
+    <parameter name="DeviceName" value="emulator-5556" />
+    <parameter name="PlatformVersion" value="13" />
+    <parameter name="PlatformName" value="android" />
+    <test name="iOS">
+        <classes>
+            <class name="TestRunner.iOSRunnerTest"/>
+        </classes>
+    </test>
+</suite>

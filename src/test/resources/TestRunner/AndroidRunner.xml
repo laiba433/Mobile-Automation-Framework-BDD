@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Android Test Suite" thread-count="1">
+    <parameter name="Username" value="usama165@mailinator.com" />
+    <parameter name="Password" value="usama165" />
+    <parameter name="Key" value="Android" />
+    <parameter name="DeviceName" value="emulator-5554" />
+    <parameter name="PlatformVersion" value="11" />
+    <parameter name="PlatformName" value="android" />
+    <parameter name="Udid" value=""/>
+    <test name="Android">
+        <classes>
+            <class name="TestRunner.AndroidRunnerTest"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,213 @@
+{
+  "LoginBtnSplash": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/login_button"
+  },
+  "Username": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/emailLoginField"
+  },
+  "Password": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/passwordLoginField"
+  },
+  "LoginButton": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/login_button"
+  },
+  "CodeField": {
+    "locator": "Class",
+    "value": "android.widget.EditText"
+  },
+  "VerifyButton": {
+    "locator": "Class",
+    "value": "android.widget.Button"
+  },
+  "SymbolField": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/addSymbolEditText"
+  },
+  "AddSymbolIcon": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/addSymbolToListButton"
+  },
+  "TradeTab": {
+    "locator": "XPath",
+    "value": "//android.widget.FrameLayout[@content-desc=\"Trade\"]"
+  },
+  "QuantityField": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/quantity"
+  },
+  "BuyButton": {
+    "locator": "XPath",
+    "value": "//XCUIElementTypeApplication[@name=\"vBate\"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeScrollView/XCUIElementTypeOther[1]/XCUIElementTypeButton[2]"
+  },
+  "SendOrderButton": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/sendOrder"
+  },
+  "AdvanceButton": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/switchAdvance"
+  },
+  "ConfirmOrderYes": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/sendOrder"
+  },
+  "ConfirmOrderPopUp": {
+    "locator": "Name",
+    "value": "Order Confirmation"
+  },
+  "ConfirmOrderNo": {
+    "locator": "Name",
+    "value": "No"
+  },
+  "WatchListTab": {
+    "locator": "XPath",
+    "value": "//android.widget.FrameLayout[@content-desc=\"Watchlist\"]"
+  },
+  "EditWatchList": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/editWatchList"
+  },
+  "WatchListSymbolField": {
+    "locator": "XPath",
+    "value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/androidx.cardview.widget.CardView/androidx.appcompat.widget.LinearLayoutCompat/android.widget.EditText"
+  },
+  "WatchListAddSymbolicon": {
+    "locator": "XPath",
+    "value": "/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/androidx.drawerlayout.widget.DrawerLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.viewpager.widget.ViewPager/androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout/androidx.appcompat.widget.LinearLayoutCompat/androidx.cardview.widget.CardView/androidx.appcompat.widget.LinearLayoutCompat/android.widget.ImageView[2]"
+  },
+  "Accounts": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/accountSpinner"
+  },
+  "OrderType": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/orderTypeSpinnerIcon"
+  },
+  "ComboBoxValues": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/item_power_menu_layout"
+  },
+  "PositionList":{
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/position"
+  },
+  "PositionTab":
+  {
+    "locator": "XPath",
+    "value": "//android.widget.FrameLayout[@content-desc=\"Positions\"]"
+  },
+  "PositionSymbolLabel": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/position_symbol"
+
+  },
+  "PositionQuantityLabel": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/execQty"
+  },
+  "PositionStatusLabel": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/position_status"
+  },
+  "PositionMenuIcon": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/position_menu"
+  },
+  "PositionMenuOptionText": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/title"
+  },
+  "CompanyInfoLabel": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/companyInfo"
+  },
+  "LocateTab": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/locateFragment"
+  },
+  "RequestQuoteButton": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/requestQuote"
+  },
+  "LocateWatchTab": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/locateTab"
+  },
+  "LocateSummaryTab": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/summaryTab"
+  },
+  "LocateList": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/locatesRecyclerView"
+  },
+
+  "LocateView": {
+    "locator": "Class",
+    "value": "android.view.ViewGroup"
+  },
+  "LocateSymbol": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/symbol"
+  },
+  "LocateQuantity": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/quantity_value"
+  },
+  "LocateTime": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/time"
+  },
+  "LocateRateValue": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/rate_value"
+  },
+  "LocateStatus": {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/statusDesc"
+  }
+,
+  "locateButton" : {
+    "locator" : "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/locateBtn"
+  },
+"SessionTimeoutMessage": {
+  "locator" : "Id",
+  "value": "android:id/message"
+},
+  "SessionTimeoutOkButton": {
+    "locator": "Id",
+    "value": "android:id/button1"
+  },
+"NavBar": {
+  "locator": "Id",
+  "value": "com.logiciel.vbate.android.app.qa:id/navView"
+},
+  "ToastMessage":
+  {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/tvTitle"
+  },
+  "LastPrice":
+{
+  "locator": "Id",
+  "value": "com.logiciel.vbate.android.app.qa:id/lastPrice"
+},
+  "BidPrice":
+  {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/bid_txt"
+  },
+  "AskPrice":
+  {
+    "locator": "Id",
+    "value": "com.logiciel.vbate.android.app.qa:id/ask_txt"
+  }
+}
+
+
+

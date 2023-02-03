@@ -1,0 +1,12 @@
+{
+  "Username": "usama165@mailinator.com",
+  "Password": "usama165",
+  "AndroidLocatorsFile":"src/test/resources/JsonFiles/AndroidLocators.json",
+  "iOSLocatorsFile": "src/test/resources/JsonFiles/iOSLocators.json",
+  "ComboBoxValueFile": "src/test/resources/JsonFiles/ComboBoxValues.json",
+  "AppJsonFile": "src/test/resources/JsonFiles/App.json",
+  "iOSServerURL": "http://10.0.21.58:4723/wd/hub",
+  "AndroidServerURL": "http://127.0.0.1:4723/wd/hub",
+  "Success": "Success",
+  "Fail": "Fail"
+}

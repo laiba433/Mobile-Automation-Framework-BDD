@@ -1,0 +1,21 @@
+{
+  "Accounts": [
+    "qatest23account1",
+    "1LOC-LOCA-123456-M"
+  ],
+  "OrderType": [
+    "MKT",
+    "LMT",
+    "STOP",
+    "STOP LMT"
+  ],
+  "TIF": [
+    "Day",
+    "OPG",
+    "IOC",
+    "FOK",
+    "GTX",
+    "GTD"
+
+  ]
+}
