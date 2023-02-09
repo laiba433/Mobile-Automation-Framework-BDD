@@ -48,10 +48,10 @@ public class DriverFactory {
     }
 
 
-    public static IDriverGeneralMethods GetDriverSpecificMethods() {
+    public static IDriverGeneralMethods GetDriverSpecificMethods(IDriverGeneralMethods driver) {
         if (appium == null)
         {
-            appium = (IDriverGeneralMethods)driver;
+            appium = driver;
         }
         return appium;
     }

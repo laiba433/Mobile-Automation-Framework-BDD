@@ -4,7 +4,7 @@
     <parameter name="Username" value="usama165@mailinator.com" />
     <parameter name="Password" value="usama165" />
     <parameter name="Key" value="Android" />
-    <parameter name="DeviceName" value="emulator-5554" />
+    <parameter name="DeviceName" value="Pixel_6_API_30" />
     <parameter name="PlatformVersion" value="11" />
     <parameter name="PlatformName" value="android" />
     <parameter name="Udid" value=""/>

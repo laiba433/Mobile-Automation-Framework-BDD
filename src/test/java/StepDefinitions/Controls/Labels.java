@@ -29,7 +29,7 @@ public class Labels
         String FoundText="";
         try
         {
-            element = ElementFinder.Instance().FindElement(Key, DriverFactory.driver);
+            element = ElementFinder.FindElement(Key, DriverFactory.driver);
             FoundText=element.getText();
             MyLogger.log.info("Text set for "+Key+" element is "+FoundText);
         }

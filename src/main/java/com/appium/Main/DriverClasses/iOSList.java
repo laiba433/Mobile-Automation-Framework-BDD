@@ -29,9 +29,9 @@ public class iOSList implements IList
     @Override
     public int GetGridIndexValueOfPosition(String Symbol, String Position, String AccountValue) {
 
-        GeneralHelper.Instance().Wait(5000);
-        List<MobileElement> SymbolList = ElementFinder.Instance().GetElementList("PositionSymbolLabel", DriverFactory.driver);
-        List<MobileElement> PositionStatusList = ElementFinder.Instance().GetElementList("PositionStatusLabel", DriverFactory.driver);
+        GeneralHelper.Wait(5000);
+        List<MobileElement> SymbolList = ElementFinder.GetElementList("PositionSymbolLabel", DriverFactory.driver);
+        List<MobileElement> PositionStatusList = ElementFinder.GetElementList("PositionStatusLabel", DriverFactory.driver);
 
         if (SymbolList.size() != 0)
         {
@@ -69,8 +69,8 @@ public class iOSList implements IList
         int count =0;
         List<Map<String, String>> data = table.asMaps(String.class, String.class);
         for (int i = 0; i < data.size(); i++) {
-            GeneralHelper.Instance().Wait(5000);
-          List<MobileElement> list= ElementFinder.Instance.GetElementList(data.get(i).get("Key"), DriverFactory.driver);
+            GeneralHelper.Wait(5000);
+          List<MobileElement> list= ElementFinder.GetElementList(data.get(i).get("Key"), DriverFactory.driver);
             String elementText = (list.get(index)).getText();
             if (elementText.equals(data.get(i).get("Value")))
             {
@@ -94,7 +94,7 @@ public class iOSList implements IList
     public void ClickOnPositionMenuIcon(String Symbol, String Position, String AccountValue)
     {
         int index = iOSList.Instance().GetGridIndexValueOfPosition(Symbol, Position, AccountValue);
-        List<MobileElement> List = ElementFinder.Instance().GetElementList("PositionMenuIcon", DriverFactory.driver);
+        List<MobileElement> List = ElementFinder.GetElementList("PositionMenuIcon", DriverFactory.driver);
         List.get(index).click();
     }
 
@@ -104,17 +104,17 @@ public class iOSList implements IList
         {
             case "Increase":
             {
-                ElementFinder.Instance().FindElement("Increase", DriverFactory.driver).click();
+                ElementFinder.FindElement("Increase", DriverFactory.driver).click();
                 break;
             }
             case "Decrease":
             {
-                ElementFinder.Instance().FindElement("Decrease", DriverFactory.driver).click();
+                ElementFinder.FindElement("Decrease", DriverFactory.driver).click();
                 break;
             }
             case "Flatten":
             {
-                ElementFinder.Instance().FindElement("Flatten", DriverFactory.driver).click();
+                ElementFinder.FindElement("Flatten", DriverFactory.driver).click();
                 break;
             }
             default:

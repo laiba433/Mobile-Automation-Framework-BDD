@@ -26,7 +26,7 @@ public class Android extends AndroidDriver implements IDriverGeneralMethods {
         String result;
         try
         {
-            GeneralHelper.Instance().Wait(2000);
+            GeneralHelper.Wait(2000);
             List<MobileElement> elementlist = DriverFactory.driver.findElements(ParseLocators.GetLocator("CodeField"));
             String[] CodeArray = Code.split("", Code.length());
             if (CodeArray.length == elementlist.size())

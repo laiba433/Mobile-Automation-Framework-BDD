@@ -13,38 +13,25 @@ import java.util.List;
 
 public class ElementFinder
 {
-    public static ElementFinder Instance=null;
 
-    public static ElementFinder Instance()
-    {
-        {
-            if(Instance== null)
-            {
-                Instance = new ElementFinder();
-            }
-
-            return Instance;
-        }
-    }
-
-    public MobileElement FindElement(String Key, AppiumDriver driver)
+    public static MobileElement FindElement(String Key, AppiumDriver driver)
     {
         String PageSource= DriverFactory.driver.getPageSource();
         return FindElement(Key, driver,2,false,false,PageSource);
     }
 
-    public MobileElement FindElement(String Key, MobileElement ParentElement)
+    public static MobileElement FindElement(String Key, MobileElement ParentElement)
     {
         String PageSource= DriverFactory.driver.getPageSource();
         return FindElement(Key,ParentElement,2,false,false,PageSource);
     }
 
-    private MobileElement FindElement(String Key, AppiumDriver driver,int attempts, boolean endOfPage, boolean topOfthePage, String previousPageSource)
+    private static MobileElement FindElement(String Key, AppiumDriver driver,int attempts, boolean endOfPage, boolean topOfthePage, String previousPageSource)
     {
         MobileElement element = null;
         try
         {
-            GeneralHelper.Instance().WaitForVisibility(5,Key);
+            GeneralHelper.WaitForVisibility(5,Key);
             element = (MobileElement) driver.findElement(ParseLocators.GetLocator(Key));
 
             if (element != null)
@@ -68,14 +55,14 @@ public class ElementFinder
                 {
                     if (!endOfPage && topOfthePage==false)
                     {
-                        GeneralHelper.Instance().SwipeDown();
+                        GeneralHelper.SwipeDown();
                         endOfPage = previousPageSource.equals(DriverFactory.driver.getPageSource());
                         previousPageSource = DriverFactory.driver.getPageSource();
                         return FindElement(Key, driver, attempts, endOfPage,topOfthePage,previousPageSource);
                     }
                     else if (!topOfthePage && endOfPage==true)
                     {
-                        GeneralHelper.Instance().SwipeUP();
+                        GeneralHelper.SwipeUP();
                         topOfthePage = previousPageSource.equals(DriverFactory.driver.getPageSource());
                         previousPageSource = DriverFactory.driver.getPageSource();
                         return FindElement(Key, driver, attempts, endOfPage,topOfthePage,previousPageSource);
@@ -91,11 +78,11 @@ public class ElementFinder
         }
 
     }
-    private MobileElement FindElement(String Key, MobileElement ParentElement,int attempts, boolean endOfPage,boolean topOfthePage, String previousPageSource)
+    private static MobileElement FindElement(String Key, MobileElement ParentElement,int attempts, boolean endOfPage,boolean topOfthePage, String previousPageSource)
     {
         MobileElement element = null;
         try {
-            GeneralHelper.Instance().WaitForVisibility(5,Key);
+            GeneralHelper.WaitForVisibility(5,Key);
             element = ParentElement.findElement(ParseLocators.GetLocator(Key));
 
             if (element != null)
@@ -120,14 +107,14 @@ public class ElementFinder
 
                     if (!endOfPage && topOfthePage==false)
                     {
-                        GeneralHelper.Instance().SwipeDown();
+                        GeneralHelper.SwipeDown();
                         endOfPage = previousPageSource.equals(DriverFactory.driver.getPageSource());
                         previousPageSource = DriverFactory.driver.getPageSource();
                         return FindElement(Key, ParentElement, attempts, endOfPage,topOfthePage,previousPageSource);
                     }
                     else if (!topOfthePage && endOfPage==true)
                     {
-                        GeneralHelper.Instance().SwipeUP();
+                        GeneralHelper.SwipeUP();
                         topOfthePage = previousPageSource.equals(DriverFactory.driver.getPageSource());
                         previousPageSource = DriverFactory.driver.getPageSource();
                         return FindElement(Key, ParentElement, attempts, endOfPage,topOfthePage,previousPageSource);
@@ -144,12 +131,12 @@ public class ElementFinder
 
     }
 
-    public List<MobileElement> GetElementList(String Key, AppiumDriver driver){
+    public static List<MobileElement> GetElementList(String Key, AppiumDriver driver){
        List<MobileElement> ElementList= null;
 
 try
 {
-    GeneralHelper.Instance().WaitForVisibilityofElements(2,Key);
+    GeneralHelper.WaitForVisibilityofElements(2,Key);
 
     if(App.key.equals("Android"))
     {
@@ -175,12 +162,12 @@ catch (Exception e)
 return ElementList;
     }
 
-    public List<MobileElement> GetElementList(String Key, MobileElement ParentElement){
+    public static List<MobileElement> GetElementList(String Key, MobileElement ParentElement){
         List<MobileElement> elementList= null;
 
         try
         {
-            GeneralHelper.Instance().WaitForVisibilityofElements(2,Key);
+            GeneralHelper.WaitForVisibilityofElements(2,Key);
 
             if(App.key.equals("Android"))
             {

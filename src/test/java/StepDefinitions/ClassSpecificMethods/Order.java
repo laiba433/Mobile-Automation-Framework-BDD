@@ -57,10 +57,8 @@ public class Order
         for(String s: list){
             try
             {
-                General.Instance().Wait(5000);
                 Textbox.Instance().FillTextBox("SymbolField", s);
                 Button.Instance().ClickButton("AddSymbolIcon");
-                General.Instance().Wait(3000);
                 String text = Textbox.Instance().GetTextOfTextbox("CompanyInfoLabel");
 
                 if (text.equals("N/A")) {
@@ -125,7 +123,6 @@ public class Order
                 }
             }
             Button.Instance().ClickButton("SendOrderButton");
-            General.Instance.Wait(2000);
             Button.Instance().ClickButton("ConfirmOrderModal");
 
         }
@@ -139,14 +136,11 @@ public class Order
     @Given("Cancel Order at Index: {int}")
     public void cancelOrder(int index)
     {
-        General.Instance().Wait(2000);
-        List<MobileElement> elementList= ElementFinder.Instance.GetElementList("viewDetailButton", DriverFactory.driver);
+        List<MobileElement> elementList= ElementFinder.GetElementList("viewDetailButton", DriverFactory.driver);
         elementList.get(index).click();
         Button.Instance().ClickButton("cancelButtononOrderModal");
-        General.Instance().Wait(2000);
         if(App.key.equals("Android"))
         {
-            General.Instance().Wait(2000);
             Button.Instance().ClickButton("okButtonOnAlertPopup");
         }
         else
@@ -157,8 +151,7 @@ public class Order
 
     @And("Click on list:{string} row at index:{int}")
     public void modifyOrderAgainstIndex(String listkey, int index) {
-        General.Instance().Wait(2000);
-        List<MobileElement> element= ElementFinder.Instance.GetElementList(listkey, DriverFactory.driver);
+        List<MobileElement> element= ElementFinder.GetElementList(listkey, DriverFactory.driver);
         element.get(index).click();
 
     }
@@ -171,9 +164,8 @@ public class Order
         {
             case "Open":
                 cancelOrder(0);
-                General.Instance().Wait(4000);
-                List<MobileElement> orderList = ElementFinder.Instance.GetElementList(listKey, DriverFactory.driver);
-                MobileElement element = ElementFinder.Instance.FindElement(ElementKey, orderList.get(0));
+                List<MobileElement> orderList = ElementFinder.GetElementList(listKey, DriverFactory.driver);
+                MobileElement element = ElementFinder.FindElement(ElementKey, orderList.get(0));
                 String foundtext = element.getText();
                 String ActualText="Cancelled";
                 if(foundtext.equals(ActualText))

@@ -23,7 +23,7 @@ public class iOS extends IOSDriver implements IDriverGeneralMethods {
         String result;
         try
         {
-            ElementFinder.Instance().FindElement("CodeField", DriverFactory.driver).sendKeys(Code);
+            ElementFinder.FindElement("CodeField", DriverFactory.driver).sendKeys(Code);
             result= "Success";
 
         }

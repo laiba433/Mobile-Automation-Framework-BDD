@@ -30,7 +30,7 @@ public class AndroidComboBox implements IComboBox
     }
     public void SelectComboValue(String ComboBoxType, String Value)
     {
-        MobileElement ComboBox= ElementFinder.Instance().FindElement(ComboBoxType, DriverFactory.driver);
+        MobileElement ComboBox= ElementFinder.FindElement(ComboBoxType, DriverFactory.driver);
         ComboBox.click();
         FindComboBoxElement(ComboBoxType,Value,false,false, DriverFactory.driver.getPageSource());
 
@@ -47,7 +47,7 @@ public class AndroidComboBox implements IComboBox
     {
         try
         {
-            GeneralHelper.Instance().WaitForVisibilityofElements(5,"ComboBoxValues");
+            GeneralHelper.WaitForVisibilityofElements(5,"ComboBoxValues");
             List<MobileElement> list = DriverFactory.driver.findElements(ParseLocators.GetLocator("ComboBoxValues"));
             if (list==null)
             {

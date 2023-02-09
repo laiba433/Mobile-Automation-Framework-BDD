@@ -36,8 +36,8 @@ public class Locates
     @Then("Aquire Locate at index {int}")
     public void AquireLocate(int index)
     {
-        MobileElement element = ElementFinder.Instance().FindElement("LocateList", DriverFactory.driver);
-        List<MobileElement> List1 = ElementFinder.Instance().GetElementList("LocateView", element);
+        MobileElement element = ElementFinder.FindElement("LocateList", DriverFactory.driver);
+        List<MobileElement> List1 = ElementFinder.GetElementList("LocateView", element);
         index = (index+1)+index;
         List1.get(index).click();
 

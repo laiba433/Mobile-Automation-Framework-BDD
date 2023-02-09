@@ -26,7 +26,8 @@ public class Capabilities extends DesiredCapabilities
         Properties props = new PropertyManager().getProps("config.properties");
         try
         {
-            if (App.key.equals("iOS")) {
+            if (App.key.equals("iOS"))
+            {
                 DesiredCapabilities capabilities = factory.CreateDesiredCapabilitiesInstance();
                 capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, App.PlatformName);
                 capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, App.PlatformVersion);
@@ -34,7 +35,9 @@ public class Capabilities extends DesiredCapabilities
                 capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, props.getProperty("iOSAutomationName"));
                 capabilities.setCapability(MobileCapabilityType.UDID, props.getProperty("Udid"));
                 capabilities.setCapability(MobileCapabilityType.APP, props.getProperty("iOSApp"));
-            } else if (App.key.equals("Android")) {
+            }
+            else if (App.key.equals("Android"))
+            {
                 DesiredCapabilities capabilities = factory.CreateDesiredCapabilitiesInstance();
                 capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, App.DeviceName);
                 capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, App.PlatformName);
@@ -42,6 +45,7 @@ public class Capabilities extends DesiredCapabilities
                 factory.capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, props.getProperty("AndroidAutomationName"));
                 capabilities.setCapability(MobileCapabilityType.APP, System.getProperty("user.dir") + props.getProperty("AndroidApp"));
                 capabilities.setCapability("enableMultiWindows", true);
+                capabilities.setCapability("avd",App.DeviceName);
             }
             else
             {

@@ -29,7 +29,7 @@ public class watchlistCases {
     public void validateSymbolOrwatchlistExistance(String Value, DataTable table) {
         int fail = 0;
         java.util.List<Map<String, String>> data = table.asMaps(String.class, String.class);
-        List<MobileElement> list1 = ElementFinder.Instance.GetElementList(Value, DriverFactory.driver);
+        List<MobileElement> list1 = ElementFinder.GetElementList(Value, DriverFactory.driver);
         for (int d = 0; d < data.size(); d++)
         {
             String DataTableValue = data.get(d).get("key");

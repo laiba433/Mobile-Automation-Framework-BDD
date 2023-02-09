@@ -40,7 +40,7 @@ public class AndroidList implements IList {
             {
                 emptyList.add(ele);
             }
-            GeneralHelper.Instance().SwipeDown();
+            GeneralHelper.SwipeDown();
             endOfPage = previousPageSource.equals(driver.getPageSource());
             previousPageSource = driver.getPageSource();
         }
@@ -61,7 +61,7 @@ public class AndroidList implements IList {
                 emptyList.add(ele);
             }
 
-            GeneralHelper.Instance().SwipeDown();
+            GeneralHelper.SwipeDown();
             endOfPage = previousPageSource.equals(DriverFactory.driver.getPageSource());
             previousPageSource = DriverFactory.driver.getPageSource();
         }
@@ -72,8 +72,8 @@ public class AndroidList implements IList {
     @Override
     public int GetGridIndexValueOfPosition(String Symbol, String Position, String AccountValue)
     {
-        GeneralHelper.Instance().Wait(5000);
-        List<MobileElement> List = ElementFinder.Instance().GetElementList("PositionList", DriverFactory.driver);
+        GeneralHelper.Wait(5000);
+        List<MobileElement> List = ElementFinder.GetElementList("PositionList", DriverFactory.driver);
         if (List.size() != 0)
         {
             MyLogger.log.info("There are " + List.size() + " Positions against " + AccountValue + " account");
@@ -87,8 +87,8 @@ public class AndroidList implements IList {
         for (MobileElement el : List)
         {
             index++;
-            MobileElement Symboltext = ElementFinder.Instance().FindElement("PositionSymbolLabel", el);
-            MobileElement Positiontext = ElementFinder.Instance().FindElement("PositionStatusLabel", el);
+            MobileElement Symboltext = ElementFinder.FindElement("PositionSymbolLabel", el);
+            MobileElement Positiontext = ElementFinder.FindElement("PositionStatusLabel", el);
             if (Symboltext.getText().equals(Symbol) && Positiontext.getText().equals(Position)) {
                 MyLogger.log.info("Index of Position " + Symbol + " against " + AccountValue + " is " + index);
                 break;
@@ -112,14 +112,13 @@ public class AndroidList implements IList {
 
     public void ValidateLocateAtIndex(int index, DataTable table)
     {
-        MobileElement element = ElementFinder.Instance().FindElement("LocateList", DriverFactory.driver);
-        List<MobileElement> List1 = ElementFinder.Instance().GetElementList("LocateView", element);
+        MobileElement element = ElementFinder.FindElement("LocateList", DriverFactory.driver);
+        List<MobileElement> List1 = ElementFinder.GetElementList("LocateView", element);
         index = (index + 1) + index;
         List<Map<String, String>> data = table.asMaps(String.class, String.class);
         for (int i = 0; i < data.size(); i++)
         {
-            GeneralHelper.Instance().Wait(5000);
-            String elementText = ElementFinder.Instance.FindElement(data.get(i).get("Key"), List1.get(index)).getText();
+            String elementText = ElementFinder.FindElement(data.get(i).get("Key"), List1.get(index)).getText();
             System.out.println(elementText);
             System.out.println(data.get(i).get("Key"));
             if (elementText.equals(data.get(i).get("Value")))
@@ -137,12 +136,11 @@ public class AndroidList implements IList {
         public void ValidateListValues (String Listname,int index, DataTable table)
         {
             int count=0;
-            List<MobileElement> List = ElementFinder.Instance().GetElementList(Listname, DriverFactory.driver);
+            List<MobileElement> List = ElementFinder.GetElementList(Listname, DriverFactory.driver);
             List<Map<String, String>> data = table.asMaps(String.class, String.class);
             for (int i = 0; i < data.size(); i++)
             {
-                GeneralHelper.Instance().Wait(5000);
-                String elementText = ElementFinder.Instance.FindElement(data.get(i).get("Key"), List.get(index)).getText();
+                String elementText = ElementFinder.FindElement(data.get(i).get("Key"), List.get(index)).getText();
                 if (elementText.equals(data.get(i).get("Value")))
                 {
                     MyLogger.log.info(data.get(i).get("Key") + " Value " + data.get(i).get("Value") + " is validated in " +Listname);
@@ -164,20 +162,20 @@ public class AndroidList implements IList {
     public void ClickOnPositionMenuIcon(String Symbol, String Position, String AccountValue)
     {
         int index = AndroidList.Instance().GetGridIndexValueOfPosition(Symbol, Position, AccountValue);
-        List<MobileElement> List = ElementFinder.Instance().GetElementList("PositionList", DriverFactory.driver);
-        ElementFinder.Instance().FindElement("PositionMenuIcon", List.get(index)).click();
+        List<MobileElement> List = ElementFinder.GetElementList("PositionList", DriverFactory.driver);
+        ElementFinder.FindElement("PositionMenuIcon", List.get(index)).click();
     }
 
     @Override
     public void SelectPositionMenuOption(String Option)
     {
         boolean Success = false;
-        List<MobileElement> List = ElementFinder.Instance().GetElementList("PositionMenuOptionText", DriverFactory.driver);
+        List<MobileElement> List = ElementFinder.GetElementList("PositionMenuOptionText", DriverFactory.driver);
         for (MobileElement e : List)
         {
             if (e.getText().equals(Option))
             {
-                GeneralHelper.Instance().TapOnElement(e);
+                GeneralHelper.TapOnElement(e);
                 Success=true;
                 break;
             }

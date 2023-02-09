@@ -23,7 +23,7 @@ public class Button
     @And("Get Button Text {string}")
     public String GetButtonText(String Key)
     {   String FoundText="";
-        MobileElement element= ElementFinder.Instance().FindElement(Key, DriverFactory.driver);
+        MobileElement element= ElementFinder.FindElement(Key, DriverFactory.driver);
         if(element == null)
         {
             Assert.fail();
@@ -39,7 +39,7 @@ public class Button
     @And("Click Button {string}")
     public void ClickButton(String Key)
     {
-        MobileElement element= ElementFinder.Instance().FindElement(Key, DriverFactory.driver);
+        MobileElement element= ElementFinder.FindElement(Key, DriverFactory.driver);
         element.click();
         MyLogger.log.info(Key+ "Button has been clicked");
     }

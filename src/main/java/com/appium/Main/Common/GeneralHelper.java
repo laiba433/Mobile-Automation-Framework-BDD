@@ -20,23 +20,13 @@ import static java.time.Duration.ofMillis;
 
 public class GeneralHelper
 {
-    public static GeneralHelper Instance=null;
-    public static GeneralHelper Instance(){
-        {
-            if(Instance== null)
-            {
-                Instance = new GeneralHelper();
 
-            }
-            return Instance;
-        }
-    }
-    public void swipe(int startX, int startY, int endX, int endY, int millis){
+    public static void swipe(int startX, int startY, int endX, int endY, int millis){
 
         TouchAction t = new TouchAction(DriverFactory.driver);
         t.press(point(startX, startY)).waitAction(waitOptions(ofMillis(millis))).moveTo(point(endX, endY)).release().perform();
     }
-    public void Wait(int TimeInMilliseconds){
+    public static void Wait(int TimeInMilliseconds){
         try
         {
             Thread.sleep(TimeInMilliseconds);
@@ -48,7 +38,7 @@ public class GeneralHelper
         }
     }
 
-    public  void WaitForVisibility(int TimeInSeconds, String ElementKey)
+    public static void WaitForVisibility(int TimeInSeconds, String ElementKey)
     {
         WebDriverWait wait = new WebDriverWait(DriverFactory.driver, TimeInSeconds);
         try
@@ -61,7 +51,7 @@ public class GeneralHelper
         }
     }
 
-    public  void WaitForVisibilityofElements(int TimeInSeconds, String ElementKey)
+    public static void WaitForVisibilityofElements(int TimeInSeconds, String ElementKey)
     {
         WebDriverWait wait = new WebDriverWait(DriverFactory.driver, TimeInSeconds);
         try
@@ -74,7 +64,7 @@ public class GeneralHelper
         }
     }
 
-    public  void WaitUntilAlertIsPresent()
+    public static  void WaitUntilAlertIsPresent()
     {
         WebDriverWait wait = new WebDriverWait(DriverFactory.driver, 5);
         try
@@ -87,7 +77,7 @@ public class GeneralHelper
         }
     }
 
-    public void SwipeDown() {
+    public static void SwipeDown() {
         Dimension size = DriverFactory.driver.manage().window().getSize();
         int startX = (int) (size.width * 0.5);
         int endX = (int) (size.width * 0.5);
@@ -98,7 +88,7 @@ public class GeneralHelper
                 .perform();
     }
 
-    public void SwipeUP() {
+    public static void SwipeUP() {
         Dimension size = DriverFactory.driver.manage().window().getSize();
         int startX = (int) (size.width * 0.5);
         int endX = (int) (size.width * 0.5);
@@ -108,7 +98,7 @@ public class GeneralHelper
         t.press(point(startX, startY)).waitAction().moveTo(point(endX, endY)).release()
                 .perform();
     }
-    public void LogMessage(String LoggingType, String Message){
+    public static void LogMessage(String LoggingType, String Message){
         switch (LoggingType)
         {
             case "Debug":
@@ -138,10 +128,10 @@ public class GeneralHelper
         }
     }
 
-    public void CheckPresenceOfElement(String Key)
+    public static void CheckPresenceOfElement(String Key)
     {
         String Result;
-        MobileElement element = ElementFinder.Instance().FindElement(Key, DriverFactory.driver);
+        MobileElement element = ElementFinder.FindElement(Key, DriverFactory.driver);
         WaitForVisibility(10,Key);
         boolean IsPresent = element.isDisplayed();
         if (IsPresent == true)
@@ -157,18 +147,18 @@ public class GeneralHelper
 
         Assert.assertEquals(GlobalVariables.Success,Result);
     }
-    public void closeApp()
+    public static void closeApp()
     {
         ((InteractsWithApps) DriverFactory.driver).closeApp();
     }
-    public void launchApp()
+    public static void  launchApp()
     {
         ((InteractsWithApps) DriverFactory.driver).launchApp();
     }
 
-    public boolean IsControlEnabled(String Key)
+    public static boolean IsControlEnabled(String Key)
     {
-        MobileElement element = ElementFinder.Instance().FindElement(Key, DriverFactory.driver);
+        MobileElement element = ElementFinder.FindElement(Key, DriverFactory.driver);
         boolean isEnabled = element.isEnabled();
 
         if(isEnabled == true)
@@ -186,12 +176,12 @@ public class GeneralHelper
 
     }
 
-    public String[] ConvertStringToStringArray(String Value, String SplitBy)
+    public static String[] ConvertStringToStringArray(String Value, String SplitBy)
     {
         String[] ConvertedArray = Value.split(SplitBy);
         return ConvertedArray;
     }
-    public void TapOnElement(MobileElement element)
+    public static void TapOnElement(MobileElement element)
     {
         try
         {

@@ -30,40 +30,40 @@ public static General Instance(){
     @And("Wait for {int}")
     public void Wait(int TimeInMilliseconds)
     {
-        GeneralHelper.Instance().Wait(TimeInMilliseconds);
+        GeneralHelper.Wait(TimeInMilliseconds);
     }
 
     @And("Wait for Visibilty till {int}")
     public  void WaitForVisibility(int TimeInSeconds, String ElementKey)
     {
-        GeneralHelper.Instance().WaitForVisibility(TimeInSeconds,ElementKey);
+        GeneralHelper.WaitForVisibility(TimeInSeconds,ElementKey);
     }
 
     @And("Wait Until Alert is present")
     public  void WaitUntilAlertIsPresent(){
-       GeneralHelper.Instance().WaitUntilAlertIsPresent();
+       GeneralHelper.WaitUntilAlertIsPresent();
     }
 
     @And("Log Message {string} {string}")
     public void LogMessage(String LoggingType, String Message)
     {
-      GeneralHelper.Instance().LogMessage(LoggingType,Message);
+      GeneralHelper.LogMessage(LoggingType,Message);
     }
 
     @Then("Check the Presence of {string}")
     public void CheckPresenceOfElement(String Key)
     {
-      GeneralHelper.Instance().CheckPresenceOfElement(Key);
+      GeneralHelper.CheckPresenceOfElement(Key);
     }
     @And("Close App")
     public void closeApp()
     {
-       GeneralHelper.Instance().closeApp();
+       GeneralHelper.closeApp();
     }
     @And("Launch App")
     public void launchApp()
     {
-      GeneralHelper.Instance().launchApp();
+      GeneralHelper.launchApp();
     }
 
     //Need Changes in -> CheckIfTheUserIsLogin()
@@ -76,7 +76,7 @@ public static General Instance(){
             try
             {
 
-                MobileElement element = ElementFinder.Instance().FindElement("NavBar", DriverFactory.driver);
+                MobileElement element = ElementFinder.FindElement("NavBar", DriverFactory.driver);
 
 
                 if (element.isDisplayed())
@@ -90,7 +90,7 @@ public static General Instance(){
                 try
                 {
 
-                    MobileElement element = ElementFinder.Instance().FindElement("SessionTimeoutMessage", DriverFactory.driver);
+                    MobileElement element = ElementFinder.FindElement("SessionTimeoutMessage", DriverFactory.driver);
                     String text = element.getText();
                     if (text.equals("Your Session has timed out. Please login again."))
                     {
@@ -128,15 +128,15 @@ public static General Instance(){
     @And("Tap On Control {string} ")
     public void TapOnElement(String Key)
     {
-        MobileElement element = ElementFinder.Instance().FindElement(Key, DriverFactory.driver);
-        GeneralHelper.Instance().TapOnElement(element);
+        MobileElement element = ElementFinder.FindElement(Key, DriverFactory.driver);
+        GeneralHelper.TapOnElement(element);
     }
 
     @And("Validate Toast Message: {string}")
     public void ValidateToastMessage(String value)
     {
 
-        MobileElement message = ElementFinder.Instance().FindElement("ToastMessage", DriverFactory.driver);
+        MobileElement message = ElementFinder.FindElement("ToastMessage", DriverFactory.driver);
         System.out.println("Toast message : " + message.getText());
         if(message.getText().equals(value))
         {

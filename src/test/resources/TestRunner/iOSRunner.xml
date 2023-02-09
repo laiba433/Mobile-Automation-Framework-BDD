@@ -4,9 +4,10 @@
     <parameter name="Username" value="usama165@mailinator.com" />
     <parameter name="Password" value="usama165" />
     <parameter name="Key" value="Android" />
-    <parameter name="DeviceName" value="emulator-5556" />
+    <parameter name="DeviceName" value="Pixel_XL_API_33" />
     <parameter name="PlatformVersion" value="13" />
     <parameter name="PlatformName" value="android" />
+    <parameter name="Udid" value=""/>
     <test name="iOS">
         <classes>
             <class name="TestRunner.iOSRunnerTest"/>

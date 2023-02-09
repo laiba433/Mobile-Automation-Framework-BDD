@@ -37,12 +37,12 @@ public class ListControl
             try {
                 if (App.key.equals("Android"))
                 {
-                    ElementList = ElementFinder.Instance.GetElementList(List, DriverFactory.driver);
-                    element = ElementFinder.Instance().FindElement(ElementKey, ElementList.get(index));
+                    ElementList = ElementFinder.GetElementList(List, DriverFactory.driver);
+                    element = ElementFinder.FindElement(ElementKey, ElementList.get(index));
                     FoundText = element.getText();
                 } else
                 {
-                    ElementList = ElementFinder.Instance.GetElementList(ElementKey, DriverFactory.driver);
+                    ElementList = ElementFinder.GetElementList(ElementKey, DriverFactory.driver);
                     FoundText = ElementList.get(index).getText();
                 }
 

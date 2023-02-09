@@ -43,7 +43,7 @@ public class Textbox {
         try
         {
         General.Instance().Wait(2000);
-            element = ElementFinder.Instance().FindElement(Key, DriverFactory.driver);
+            element = ElementFinder.FindElement(Key, DriverFactory.driver);
             element.sendKeys(Value);
             if (App.key.equals("iOS"))
             {
@@ -99,7 +99,7 @@ public class Textbox {
         try
         {
 
-            element = ElementFinder.Instance().FindElement(Key, DriverFactory.driver);
+            element = ElementFinder.FindElement(Key, DriverFactory.driver);
             FoundText=element.getText();
             MyLogger.log.info("Text set for "+Key+" element is "+FoundText);
         }
@@ -140,7 +140,7 @@ public class Textbox {
     {
         try
         {
-            MobileElement element = ElementFinder.Instance().FindElement(Key, DriverFactory.driver);
+            MobileElement element = ElementFinder.FindElement(Key, DriverFactory.driver);
             element.click();
             element.clear();
         }

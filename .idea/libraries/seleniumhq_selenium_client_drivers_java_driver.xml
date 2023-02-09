@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="seleniumhq.selenium.client.drivers.java.driver" type="repository">
+    <properties maven-id="org.seleniumhq.selenium.client-drivers:selenium-java-client-driver:1.0.2" />
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/client-drivers/selenium-java-client-driver/1.0.2/selenium-java-client-driver-1.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
